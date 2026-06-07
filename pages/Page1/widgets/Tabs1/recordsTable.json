@@ -1,0 +1,719 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowAddNewRow": true,
+  "animateLoading": true,
+  "borderColor": "#E0DEDE",
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "borderWidth": "1",
+  "bottomRow": 71,
+  "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
+  "canFreezeColumn": true,
+  "cellBackground": "",
+  "childStylesheet": {
+    "button": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "editActions": {
+      "discardBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "discardButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+      "saveBorderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "saveButtonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "iconButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "buttonColor": "{{appsmith.theme.colors.primaryColor}}"
+    },
+    "menuButton": {
+      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+      "boxShadow": "none",
+      "menuColor": "{{appsmith.theme.colors.primaryColor}}"
+    }
+  },
+  "columnOrder": [
+    "uploadDate",
+    "title",
+    "author",
+    "orderInList",
+    "categoryIds",
+    "durationSecs",
+    "imageUrl",
+    "_ref",
+    "customColumn1",
+    "contentUrl",
+    "customColumn2",
+    "id",
+    "customColumn3",
+    "isFree",
+    "EditActions1"
+  ],
+  "columnUpdatedAt": 1698434038705,
+  "columnWidthMap": {
+    "author": 118,
+    "categoryIds": 227,
+    "contentUrl": 220,
+    "durationSecs": 204,
+    "imageUrl": 179,
+    "isFree": 190,
+    "title": 182
+  },
+  "defaultPageSize": 0,
+  "defaultSelectedRowIndex": "0",
+  "defaultSelectedRowIndices": [
+    0
+  ],
+  "delimiter": ",",
+  "displayName": "Table",
+  "dynamicBindingPathList": [
+    {
+      "key": "tableData"
+    },
+    {
+      "key": "primaryColumns.id.computedValue"
+    },
+    {
+      "key": "primaryColumns.categoryIds.computedValue"
+    },
+    {
+      "key": "primaryColumns.customColumn2.boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn2.borderRadius"
+    },
+    {
+      "key": "primaryColumns.customColumn2.menuColor"
+    },
+    {
+      "key": "primaryColumns.customColumn1.computedValue"
+    },
+    {
+      "key": "primaryColumns.title.computedValue"
+    },
+    {
+      "key": "primaryColumns.orderInList.computedValue"
+    },
+    {
+      "key": "primaryColumns._ref.computedValue"
+    },
+    {
+      "key": "primaryColumns.imageUrl.computedValue"
+    },
+    {
+      "key": "primaryColumns.author.computedValue"
+    },
+    {
+      "key": "primaryColumns.uploadDate.computedValue"
+    },
+    {
+      "key": "primaryColumns.durationSecs.computedValue"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "boxShadow"
+    },
+    {
+      "key": "primaryColumns.customColumn3.computedValue"
+    },
+    {
+      "key": "primaryColumns.contentUrl.computedValue"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveButtonColor"
+    },
+    {
+      "key": "primaryColumns.EditActions1.saveBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.discardBorderRadius"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.isFree.computedValue"
+    }
+  ],
+  "dynamicPropertyPathList": [
+    {
+      "key": "primaryColumns.EditActions1.isSaveDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.isDiscardDisabled"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "primaryColumns.customColumn2.menuItems.menuItemww6o7mn4yx.onClick"
+    },
+    {
+      "key": "primaryColumns.customColumn2.menuItems.menuItemq1xbzlf21h.onClick"
+    },
+    {
+      "key": "onAddNewRowSave"
+    },
+    {
+      "key": "primaryColumns.EditActions1.onSave"
+    }
+  ],
+  "enableClientSideSearch": true,
+  "enableServerSideFiltering": false,
+  "hideCard": false,
+  "horizontalAlignment": "LEFT",
+  "iconSVG": "https://appcdn.appsmith.com/static/media/icon.24905525921dd6f5ff46d0dd843b9e12.svg",
+  "inlineEditingSaveOption": "ROW_LEVEL",
+  "isDeprecated": false,
+  "isLoading": false,
+  "isSortable": true,
+  "isVisible": true,
+  "isVisibleDownload": true,
+  "isVisibleFilters": true,
+  "isVisiblePagination": true,
+  "isVisibleSearch": true,
+  "key": "0f3exoga1t",
+  "label": "Data",
+  "leftColumn": 0,
+  "minWidth": 450,
+  "mobileBottomRow": 116,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 25,
+  "mobileTopRow": 88,
+  "needsHeightForContent": true,
+  "onAddNewRowSave": "{{miegu_addRecord.run({\n  \"id\": Date.now(),\n  \"audioUrl\": recordsTable.newRow.audioUrl,\n  \"contentUrl\": recordsTable.newRow.contentUrl,\n  \"author\": recordsTable.newRow.author,\n  \"durationSecs\": recordsTable.newRow.durationSecs,\n  \"imageUrl\": recordsTable.newRow.imageUrl,\n  \"isFree\": recordsTable.newRow.isFree,\n  \"orderInList\": recordsTable.newRow.orderInList,\n  \"title\": recordsTable.newRow.title,\n  \"uploadDate\": recordsTable.newRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+  "parentColumnSpace": 14.13330078125,
+  "parentId": "3zrkvjza61",
+  "parentRowSpace": 10,
+  "primaryColumns": {
+    "EditActions1": {
+      "alias": "EditActions1",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "",
+      "columnType": "editActions",
+      "computedValue": "",
+      "discardActionLabel": "Discard",
+      "discardBorderRadius": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "discardButtonColor": "#F22B2B",
+      "discardButtonVariant": "TERTIARY",
+      "discardIconAlign": "left",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "EditActions1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardDisabled": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( !recordsTable.updatedRowIndices.includes(currentIndex)))}}",
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveDisabled": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( !recordsTable.updatedRowIndices.includes(currentIndex)))}}",
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Save / Discard",
+      "onSave": "{{miegu_editRecord.run({\n\t\"id\": recordsTable.updatedRow._ref.id,\n  \"contentUrl\": recordsTable.updatedRow.contentUrl,\n  \"author\": recordsTable.updatedRow.author,\n  \"durationSecs\": recordsTable.updatedRow.durationSecs,\n\t\"categoryIds\": miegu_getRecords.data.values().find(e => e.id === recordsTable.updatedRow._ref.id).categoryIds,\n  \"imageUrl\": recordsTable.updatedRow.imageUrl,\n  \"isFree\": recordsTable.updatedRow.isFree,\n  \"orderInList\": recordsTable.updatedRow.orderInList,\n  \"title\": recordsTable.updatedRow.title,\n  \"uploadDate\": recordsTable.updatedRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+      "originalId": "EditActions1",
+      "saveActionLabel": "Save",
+      "saveBorderRadius": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "saveButtonColor": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "saveIconAlign": "left",
+      "sticky": "right",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "_ref": {
+      "alias": "_ref",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"_ref\"])) :  currentRow[\"_ref\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "_ref",
+      "index": 7,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "_ref",
+      "originalId": "_ref",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "author": {
+      "alias": "author",
+      "allowCellWrapping": true,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"author\"])) :  currentRow[\"author\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "author",
+      "index": 5,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Autorius",
+      "originalId": "author",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "categoryIds": {
+      "alias": "categoryIds",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"categoryIds\"].map(e => miegu_getRecordCategories.data.find(f => f._ref.id == e)).filter( g => g).map(h => h.title).join(\", \"))) :  currentRow[\"categoryIds\"].map(e => miegu_getRecordCategories.data.find(f => f._ref.id == e)).filter( g => g).map(h => h.title).join(\", \") })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "categoryIds",
+      "index": 8,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Kategorijos",
+      "originalId": "categoryIds",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "contentUrl": {
+      "alias": "contentUrl",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"contentUrl\"])) :  currentRow[\"contentUrl\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "contentUrl",
+      "index": 1,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Turinio URL",
+      "originalId": "contentUrl",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn1": {
+      "alias": "Paveiksliukas",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "",
+      "columnType": "image",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"imageUrl\"])) :  currentRow[\"imageUrl\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn1",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Paveiksliukas",
+      "labelColor": "#FFFFFF",
+      "originalId": "customColumn1",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn2": {
+      "alias": "Veiksmai",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "borderRadius": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
+      "boxShadow": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( \"none\"))}}",
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "",
+      "columnType": "menuButton",
+      "computedValue": "",
+      "configureMenuItems": {
+        "config": {
+          "id": "config",
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Menu Item"
+        },
+        "id": "config",
+        "label": "Configure menu items"
+      },
+      "customAlias": "",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "customColumn2",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Veiksmai",
+      "labelColor": "#FFFFFF",
+      "menuButtonLabel": "Veiksmai",
+      "menuColor": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.colors.primaryColor)))}}",
+      "menuItems": {
+        "menuItemq1xbzlf21h": {
+          "id": "menuItemq1xbzlf21h",
+          "index": 0,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Keisti kategorijas",
+          "onClick": "{{storeValue('modalSelectedCategories', recordsTable.triggeredRow.categoryIds).then(() => {\n  showModal('Pasirinkti_kategorijas');\n});}}",
+          "widgetId": "cj9nd7xbii"
+        },
+        "menuItemww6o7mn4yx": {
+          "backgroundColor": "#dc2626",
+          "iconColor": "#fff",
+          "iconName": "key-delete",
+          "id": "menuItemww6o7mn4yx",
+          "index": 1,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Pašalinti",
+          "onClick": "{{miegu_deleteDocument.run({\n  \"docPath\": recordsTable.triggeredRow._ref.path\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+          "textColor": "#fff",
+          "widgetId": "48ecnvz945"
+        }
+      },
+      "menuItemsSource": "STATIC",
+      "originalId": "customColumn2",
+      "sourceData": [],
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "customColumn3": {
+      "alias": "Perklausymų sk.",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( (miegu_getRecordCounter.data.find(item => item.record_id === currentRow['id']) || {counter: 0}).counter)) :  (miegu_getRecordCounter.data.find(item => item.record_id === currentRow['id']) || {counter: 0}).counter })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "RIGHT",
+      "id": "customColumn3",
+      "index": 10,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": true,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Perklausymų sk.",
+      "labelColor": "#FFFFFF",
+      "originalId": "customColumn3",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "durationSecs": {
+      "alias": "durationSecs",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"durationSecs\"])) :  currentRow[\"durationSecs\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "durationSecs",
+      "index": 3,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Trukmė (sekundėmis)",
+      "originalId": "durationSecs",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true,
+        "isColumnEditableCellValid": "",
+        "max": "9999",
+        "min": "0"
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "id": {
+      "alias": "id",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"id\"])) :  currentRow[\"id\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "id",
+      "index": 8,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": false,
+      "label": "id",
+      "originalId": "id",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "imageUrl": {
+      "alias": "imageUrl",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"imageUrl\"])) :  currentRow[\"imageUrl\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "imageUrl",
+      "index": 6,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Paveiksliuko URL",
+      "originalId": "imageUrl",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "isFree": {
+      "alias": "isFree",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "checkbox",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"isFree\"])) :  currentRow[\"isFree\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "isFree",
+      "index": 4,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Ar nemokamas?",
+      "originalId": "isFree",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "orderInList": {
+      "alias": "orderInList",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "number",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"orderInList\"])) :  currentRow[\"orderInList\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "orderInList",
+      "index": 8,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Eilė sąraše",
+      "originalId": "orderInList",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true,
+        "max": "999",
+        "min": "0"
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "title": {
+      "alias": "title",
+      "allowCellWrapping": true,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"title\"])) :  currentRow[\"title\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "title",
+      "index": 9,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Pavadinimas",
+      "originalId": "title",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "uploadDate": {
+      "alias": "uploadDate",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "date",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"uploadDate\"])) :  currentRow[\"uploadDate\"] })()}}",
+      "enableFilter": true,
+      "enableSort": true,
+      "horizontalAlignment": "LEFT",
+      "id": "uploadDate",
+      "index": 4,
+      "inputFormat": "YYYY-MM-DD",
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Įkėlimo data",
+      "originalId": "uploadDate",
+      "outputFormat": "YYYY-MM-DD",
+      "sticky": "",
+      "textSize": "0.875rem",
+      "validation": {
+        "isColumnEditableCellRequired": true
+      },
+      "verticalAlignment": "CENTER",
+      "width": 150
+    }
+  },
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 64,
+  "searchKey": "",
+  "showInlineEditingOptionDropdown": true,
+  "tableData": "{{miegu_getRecords.data}}",
+  "textSize": "0.875rem",
+  "topRow": 5,
+  "totalRecordsCount": 0,
+  "type": "TABLE_WIDGET_V2",
+  "version": 2,
+  "verticalAlignment": "CENTER",
+  "widgetId": "q2lhox81ih",
+  "widgetName": "recordsTable"
+}
