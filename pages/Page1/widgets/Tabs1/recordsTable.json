@@ -47,9 +47,10 @@
     "id",
     "customColumn3",
     "isFree",
+    "description",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1698434038705,
+  "columnUpdatedAt": 1780906542279,
   "columnWidthMap": {
     "author": 118,
     "categoryIds": 227,
@@ -141,6 +142,9 @@
     },
     {
       "key": "primaryColumns.isFree.computedValue"
+    },
+    {
+      "key": "primaryColumns.description.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -191,7 +195,7 @@
   "mobileRightColumn": 25,
   "mobileTopRow": 88,
   "needsHeightForContent": true,
-  "onAddNewRowSave": "{{miegu_addRecord.run({\n  \"id\": Date.now(),\n  \"audioUrl\": recordsTable.newRow.audioUrl,\n  \"contentUrl\": recordsTable.newRow.contentUrl,\n  \"author\": recordsTable.newRow.author,\n  \"durationSecs\": recordsTable.newRow.durationSecs,\n  \"imageUrl\": recordsTable.newRow.imageUrl,\n  \"isFree\": recordsTable.newRow.isFree,\n  \"orderInList\": recordsTable.newRow.orderInList,\n  \"title\": recordsTable.newRow.title,\n  \"uploadDate\": recordsTable.newRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+  "onAddNewRowSave": "{{miegu_addRecord.run({\n  \"id\": Date.now(),\n  \"audioUrl\": recordsTable.newRow.audioUrl,\n  \"contentUrl\": recordsTable.newRow.contentUrl,\n  \"author\": recordsTable.newRow.author,\n  \"durationSecs\": recordsTable.newRow.durationSecs,\n  \"imageUrl\": recordsTable.newRow.imageUrl,\n  \"isFree\": recordsTable.newRow.isFree,\n  \"orderInList\": recordsTable.newRow.orderInList,\n  \"title\": recordsTable.newRow.title,\n  \"description\": recordsTable.newRow.description,\n  \"uploadDate\": recordsTable.newRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
   "parentColumnSpace": 14.13330078125,
   "parentId": "3zrkvjza61",
   "parentRowSpace": 10,
@@ -225,7 +229,7 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Save / Discard",
-      "onSave": "{{miegu_editRecord.run({\n\t\"id\": recordsTable.updatedRow._ref.id,\n  \"contentUrl\": recordsTable.updatedRow.contentUrl,\n  \"author\": recordsTable.updatedRow.author,\n  \"durationSecs\": recordsTable.updatedRow.durationSecs,\n\t\"categoryIds\": miegu_getRecords.data.values().find(e => e.id === recordsTable.updatedRow._ref.id).categoryIds,\n  \"imageUrl\": recordsTable.updatedRow.imageUrl,\n  \"isFree\": recordsTable.updatedRow.isFree,\n  \"orderInList\": recordsTable.updatedRow.orderInList,\n  \"title\": recordsTable.updatedRow.title,\n  \"uploadDate\": recordsTable.updatedRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+      "onSave": "{{miegu_editRecord.run({\n\t\"id\": recordsTable.updatedRow._ref.id,\n  \"contentUrl\": recordsTable.updatedRow.contentUrl,\n  \"author\": recordsTable.updatedRow.author,\n  \"durationSecs\": recordsTable.updatedRow.durationSecs,\n\t\"categoryIds\": miegu_getRecords.data.values().find(e => e.id === recordsTable.updatedRow._ref.id).categoryIds,\n  \"imageUrl\": recordsTable.updatedRow.imageUrl,\n  \"isFree\": recordsTable.updatedRow.isFree,\n  \"orderInList\": recordsTable.updatedRow.orderInList,\n  \"title\": recordsTable.updatedRow.title,\n\t\"description\": recordsTable.updatedRow.description,\n  \"uploadDate\": recordsTable.updatedRow.uploadDate\n}).then(() => {\n  miegu_getRecords.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Save",
       "saveBorderRadius": "{{recordsTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -480,6 +484,40 @@
       "originalId": "customColumn3",
       "sticky": "",
       "textSize": "0.875rem",
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "description": {
+      "alias": "description",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = recordsTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"description\"])) : description })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "description",
+      "index": 8,
+      "isCellEditable": true,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": true,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Aprašymas",
+      "notation": "standard",
+      "originalId": "description",
+      "sticky": "",
+      "textColor": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150

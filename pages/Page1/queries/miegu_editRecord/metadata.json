@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "formData": {
         "body": {
-          "data": "{\n\t\"id\": {{String(this.params.id)}},\n\t\"contentUrl\": {{this.params.contentUrl ?? \"\"}},\n\t\"author\": {{this.params.author}},\n\t\"categoryIds\": {{this.params.categoryIds}},\n\t\"durationSecs\": {{this.params.durationSecs}},\n\t\"imageUrl\": {{this.params.imageUrl}},\n\t\"isFree\": {{this.params.isFree ?? false}},\n\t\"orderInList\": {{this.params.orderInList}},\n\t\"title\": {{this.params.title}},\n\t\"uploadDate\": {{this.params.uploadDate ?? new Date()}}\n}"
+          "data": "{\n\t\"id\": {{String(this.params.id)}},\n\t\"contentUrl\": {{this.params.contentUrl ?? \"\"}},\n\t\"author\": {{this.params.author}},\n\t\"categoryIds\": {{this.params.categoryIds}},\n\t\"durationSecs\": {{this.params.durationSecs}},\n\t\"imageUrl\": {{this.params.imageUrl}},\n\t\"isFree\": {{this.params.isFree ?? false}},\n\t\"orderInList\": {{this.params.orderInList}},\n\t\"title\": {{this.params.title}},\n\t\"description\": {{this.params.description}},\n\t\"uploadDate\": {{this.params.uploadDate ?? new Date()}}\n}"
         },
         "command": {
           "data": "UPDATE_DOCUMENT"

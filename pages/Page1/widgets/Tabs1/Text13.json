@@ -42,7 +42,7 @@
     "label"
   ],
   "shouldTruncate": false,
-  "text": "Failus patalpinti galima <a target=\"_blank\" href=\"https://s3.console.aws.amazon.com/s3/buckets/mybeapp?region=eu-west-3&tab=objects\">čia (AWS S3 failų talpykla)</a>, tuomet perkopijuoti failo URL. Prieš keliant failą, konvertuoti formatą (audio failą į mp3, video failą į mp4).",
+  "text": "Failus patalpinti galima <a target=\"_blank\" href=\"https://s3.console.aws.amazon.com/s3/buckets/mieguapp?region=eu-north-1&tab=objects\">čia (AWS S3 failų talpykla)</a>, tuomet perkopijuoti failo URL. Prieš keliant failą, konvertuoti formatą (audio failą į mp3, video failą į mp4).",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 74,

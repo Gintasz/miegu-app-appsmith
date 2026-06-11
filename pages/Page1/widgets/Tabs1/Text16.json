@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 5,
   "displayName": "Text",
   "dynamicBindingPathList": [
     {
@@ -52,7 +52,7 @@
     "Suggested",
     "Content"
   ],
-  "text": "https://supabase.com/dashboard/project/rjthbhdwxbieqrxorqmt/editor/28556",
+  "text": "?",
   "textAlign": "LEFT",
   "textColor": "#231F20",
   "topRow": 1,

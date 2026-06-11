@@ -31,18 +31,18 @@
     }
   },
   "columnOrder": [
+    "id",
     "_ref",
-    "customColumn3",
     "title",
     "imageUrl",
     "customColumn2",
-    "isVisible",
-    "customColumn1",
-    "id",
     "orderInList",
+    "description",
+    "customColumn1",
+    "isVisible",
     "EditActions1"
   ],
-  "columnUpdatedAt": 1698435379894,
+  "columnUpdatedAt": 1780905831261,
   "columnWidthMap": {},
   "defaultPageSize": 0,
   "defaultSelectedRowIndex": 0,
@@ -54,9 +54,6 @@
   "dynamicBindingPathList": [
     {
       "key": "tableData"
-    },
-    {
-      "key": "primaryColumns.customColumn3.computedValue"
     },
     {
       "key": "primaryColumns.customColumn2.computedValue"
@@ -102,6 +99,9 @@
     },
     {
       "key": "primaryColumns.orderInList.computedValue"
+    },
+    {
+      "key": "primaryColumns.description.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -175,7 +175,7 @@
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Išsaugoti/Atmesti",
-      "onSave": "{{miegu_editRecordCategory.run({\n  \"id\": categoriesTable.triggeredRow._ref.id,\n  \"title\": categoriesTable.triggeredRow.title,\n  \"imageUrl\": categoriesTable.triggeredRow.imageUrl\n}).then(() => {\n  miegu_getRecordCategories.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
+      "onSave": "{{miegu_editRecordCategory.run({\n  \"id\": categoriesTable.triggeredRow._ref.id,\n  \"title\": categoriesTable.triggeredRow.title,\n  \"imageUrl\": categoriesTable.triggeredRow.imageUrl,\n  \"orderInList\": categoriesTable.triggeredRow.orderInList,\n  \"description\": categoriesTable.triggeredRow.description,\n  \"isVisible\": categoriesTable.triggeredRow.isVisible\n}).then(() => {\n  miegu_getRecordCategories.run({});\n}).catch(() => {\n  showAlert('Įvyko klaida', 'error');\n});}}",
       "originalId": "EditActions1",
       "saveActionLabel": "Išsaugoti",
       "saveBorderRadius": "{{categoriesTable.processedTableData.map((currentRow, currentIndex) => ( (appsmith.theme.borderRadius.appBorderRadius)))}}",
@@ -277,31 +277,36 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "customColumn3": {
-      "alias": "ID",
+    "description": {
+      "alias": "description",
       "allowCellWrapping": false,
       "allowSameOptionsInNewRow": true,
-      "buttonStyle": "rgb(3, 179, 101)",
+      "cellBackground": "",
       "columnType": "text",
-      "computedValue": "{{(() => { const tableData = categoriesTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( currentRow[\"_ref\"].id)) :  currentRow[\"_ref\"].id })()}}",
+      "computedValue": "{{(() => { const tableData = categoriesTable.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"description\"])) : description })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
       "enableFilter": true,
       "enableSort": true,
+      "fontStyle": "",
       "horizontalAlignment": "LEFT",
-      "id": "customColumn3",
-      "index": 8,
-      "isCellEditable": false,
+      "id": "description",
+      "index": 2,
+      "isCellEditable": true,
       "isCellVisible": true,
-      "isDerived": true,
+      "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
-      "label": "ID",
-      "labelColor": "#FFFFFF",
-      "originalId": "customColumn3",
+      "label": "Aprašymas",
+      "notation": "standard",
+      "originalId": "description",
       "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
+      "thousandSeparator": true,
       "validation": {},
       "verticalAlignment": "CENTER",
       "width": 150
@@ -376,14 +381,14 @@
       "horizontalAlignment": "LEFT",
       "id": "isVisible",
       "index": 2,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
-      "isVisible": false,
+      "isVisible": true,
       "label": "Ar matomas?",
       "originalId": "isVisible",
       "sticky": "",
@@ -406,12 +411,12 @@
       "horizontalAlignment": "LEFT",
       "id": "orderInList",
       "index": 4,
-      "isCellEditable": false,
+      "isCellEditable": true,
       "isCellVisible": true,
       "isDerived": false,
       "isDisabled": false,
       "isDiscardVisible": true,
-      "isEditable": false,
+      "isEditable": true,
       "isSaveVisible": true,
       "isVisible": true,
       "label": "Eilė sąraše",
@@ -419,7 +424,11 @@
       "sticky": "",
       "textColor": "",
       "textSize": "0.875rem",
-      "validation": {},
+      "validation": {
+        "errorMessage": "Neteisinga reiksme",
+        "min": "0",
+        "regex": "^\\d+$"
+      },
       "verticalAlignment": "CENTER",
       "width": 150
     },

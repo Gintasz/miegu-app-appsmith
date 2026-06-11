@@ -8,7 +8,7 @@
       "encodeParamsToggle": true,
       "formData": {
         "body": {
-          "data": "{\n\t\"title\": {{this.params.title}},\n\t\"imageUrl\": {{this.params.imageUrl}}\n}"
+          "data": "{\n\t\"title\": {{this.params.title}},\n\t\"imageUrl\": {{this.params.imageUrl}},\n\t\"description\": {{this.params.description}},\n\t\"orderInList\": {{parseInt(this.params.orderInList)}},\n\t\"isVisible\": {{this.params.isVisible}}\n}"
         },
         "command": {
           "data": "UPDATE_DOCUMENT"
